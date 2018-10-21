@@ -1,0 +1,28 @@
+gbm2sql - compute boosted tree predictions in SQL
+
+
+Example usage to convert an XGBoost model to PostgreSQL:
+```
+python gbm2sql --model-file=model.xgb --sql-file=model.sql
+```
+
+Check `demo_data.sql` and `demo_predictions.sql` for an example how to
+compute predictions with the SQL model.
+
+
+
+
+To run the demo, make sure you have XGBoost installed and a running
+Postgres instance the current user can connect to. Copy the XGBoost
+demo data to the current directory and then run:
+
+```
+make run-demo
+```
+
+This will:
+     - Train the XGBoost demo model and compute predictions for the test data using the Python library.
+     - Convert both test data and demo model to SQL.
+     - Import test data and demo model to SQL.
+     - Compute predictions for the test data in Postgres.
+     - Compare results from the Python library and the Postgres computation.

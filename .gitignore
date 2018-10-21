@@ -1,0 +1,10 @@
+*.pyc
+__pycache__
+env/
+*.txt.train
+*.txt.test
+*.xgb
+
+demo_data.sql
+demo_model.sql
+*_predictions.csv
